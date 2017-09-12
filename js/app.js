@@ -4,6 +4,12 @@ Vue.component('proverb', {
 			<i class="fa fa-cog fa-spin fa-5x fa-fw" v-if="!loaded"></i>
 			<span class="sr-only" v-if="!loaded">Loading...</span>			
 			<h1>{{ proverb }}</h1>
+
+			<a class="btn btn-primary btn-sm twitter-share-button"
+			  :href="'https://twitter.com/intent/tweet?text=' + proverb " target="_blank" v-if="loaded">
+			<i class="fa fa-twitter"></i> Tweet</a>
+			<br /><br />
+
 			<button class="btn btn-outline-dark btn-lg" v-if="loaded" @click="getProverb">Next</button>
 		</div>
 	`,
