@@ -2,8 +2,11 @@ Vue.component('proverb', {
 	template: `
 		<div>
 			<i class="fa fa-cog fa-spin fa-5x fa-fw" v-if="!loaded"></i>
-			<span class="sr-only" v-if="!loaded">Loading...</span>			
-			<h1>{{ proverb }}</h1>
+			<span class="sr-only" v-if="!loaded">Loading...</span>
+
+			<blockquote class="blockquote">		
+				<p class="mb-0">{{ proverb }}</p>
+			</blockquote>
 
 			<a class="btn btn-primary btn-sm twitter-share-button"
 			  :href="'https://twitter.com/intent/tweet?text=' + proverb " target="_blank" v-if="loaded">
